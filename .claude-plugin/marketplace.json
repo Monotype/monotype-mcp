@@ -1,0 +1,15 @@
+{
+  "name": "monotype",
+  "owner": { "name": "Monotype", "url": "https://www.monotype.com" },
+  "metadata": {
+    "description": "Monotype Enterprise Connector for Claude: licensed brand fonts via the Monotype Fonts MCP server.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "monotype-mcp",
+      "source": "./",
+      "description": "Hosted Monotype Fonts MCP server plus the Monotype Font Licensing, Monotype Brand Kit and Brand Font Workflow skills."
+    }
+  ]
+}

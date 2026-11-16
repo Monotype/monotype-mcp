@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "monotype": {
+      "type": "http",
+      "url": "https://mcp.monotype.com/mcp"
+    }
+  }
+}

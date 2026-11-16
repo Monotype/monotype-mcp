@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.monotype/monotype-mcp",
+  "title": "Monotype Fonts",
+  "description": "Licensed brand fonts for AI content: search, production status, web project CSS, desktop sync.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/Monotype/monotype-mcp",
+  "repository": {
+    "url": "https://github.com/Monotype/monotype-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.monotype.com/mcp"
+    }
+  ]
+}
