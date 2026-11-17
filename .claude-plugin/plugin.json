@@ -1,7 +1,7 @@
 {
   "name": "monotype-mcp",
   "version": "1.0.0",
-  "description": "Monotype Enterprise Connector: the hosted Monotype Fonts MCP server plus skills that keep generated content on licensed, production-ready brand fonts.",
+  "description": "Monotype Fonts connector: the hosted Monotype Fonts MCP server plus a skill that keeps generated content on the production-ready brand fonts in your Monotype inventory.",
   "author": { "name": "Monotype", "url": "https://www.monotype.com" },
   "homepage": "https://github.com/Monotype/monotype-mcp",
   "repository": "https://github.com/Monotype/monotype-mcp",
