@@ -51,7 +51,7 @@ Do not substitute another font service, simulated results, remembered statuses, 
 Use these connector operations when available:
 
 - `font_search_by_name(name, userQuery, ...)`
-- `get_production_fonts_with_filters(userQuery, pimStyleIds, ...)`
+- `get_production_fonts_with_filters(userQuery, fontIds, ...)`
 - `create_web_project(name, fontIds, userQuery, assetType?, description?)` for WebProject / DigitalAd
 - `create_font_list(name, fontIds, userQuery, description?)` for FontSet / font list creation
 - `get_web_projects_by_name(name, assetTypes, ...)` for duplicate-name checks before creation
@@ -68,7 +68,7 @@ Pass the user's verbatim message as `userQuery` whenever the connector exposes t
 5. **For book-cover PDFs** -> also map embedded fonts to actual text objects when the PDF structure exposes font names on spans/blocks.
 6. **Match** -> search each distinct requested face in Monotype inventory.
 7. **Consent** -> exact matches proceed silently; collect all non-exact substitutions into one approval question.
-8. **Status** -> batch all accepted `styleId`s into one production-status call.
+8. **Status** -> batch all accepted `fontId`s into one production-status call (`fontIds`, never style ids).
 9. **Table** -> show the required status/match table before the decision it informs and before creation.
 10. **Choose creation route** -> WebProject by default, DigitalAd only when explicitly requested, FontSet when the user asks for a font list/fontlist/font set/fontset/list/font collection.
 11. **Create** -> use the supplied asset name, or suggest one and ask only if none was supplied; run the route-specific duplicate-name check before creation.
@@ -135,7 +135,7 @@ For non-exact matches, ask one combined question, for example:
 
 ## Check production status
 
-Collect all accepted `styleId`s and make **one** `get_production_fonts_with_filters` call with the full set.
+Collect all accepted `fontId`s and make **one** `get_production_fonts_with_filters` call with `fontIds` set to the full list. Do not pass style ids.
 
 Read each returned row's `inProduction` value fresh in the current turn. A matched style with no returned production row should be treated as not in production.
 
