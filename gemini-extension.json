@@ -1,7 +1,7 @@
 {
   "name": "monotype-mcp",
   "version": "1.0.0",
-  "description": "Monotype Enterprise Connector: hosted Monotype Fonts MCP server plus font-licensing skills.",
+  "description": "Monotype Fonts connector: hosted Monotype Fonts MCP server plus the Monotype Fonts skill.",
   "mcpServers": {
     "monotype": {
       "httpUrl": "https://mcp.monotype.com/mcp"
